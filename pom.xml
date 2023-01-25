@@ -17,6 +17,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>bullet-bean</module>
         <module>bullet-jdbc</module>
     </modules>
 
