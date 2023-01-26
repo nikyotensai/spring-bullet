@@ -49,10 +49,6 @@ public abstract class ConnectionPointcut extends StaticMethodMatcherPointcut imp
     }
 
 
-    /**
-     * Obtain the underlying TransactionAttributeSource (may be {@code null}).
-     * To be implemented by subclasses.
-     */
     @Nullable
     protected abstract ConnectionSource getConnectionSource();
 

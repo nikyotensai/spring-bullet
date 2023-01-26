@@ -8,13 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Role;
 import org.springframework.core.Ordered;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.TransactionManagementConfigurationSelector;
 
 /**
- * {@code @Configuration} class that registers the Spring infrastructure beans
- * necessary to enable proxy-based annotation-driven transaction management.
- *
  * @author nikyotensai
  */
 @Configuration(proxyBeanMethods = false)
