@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Role;
 import org.springframework.core.Ordered;
+import org.springframework.core.annotation.AnnotationAttributes;
+import org.springframework.lang.Nullable;
 
 /**
  * @author nikyotensai
@@ -16,6 +18,8 @@ import org.springframework.core.Ordered;
 @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
 public class ConnectionConfiguration {
 
+    @Nullable
+    protected AnnotationAttributes enableConnectionManagement;
 
     @Bean
     @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
@@ -25,7 +29,11 @@ public class ConnectionConfiguration {
         BeanFactoryConnectionSourceAdvisor advisor = new BeanFactoryConnectionSourceAdvisor();
         advisor.setConnectionSource(connectionSource);
         advisor.setAdvice(connectionInterceptor);
-        advisor.setOrder(Ordered.LOWEST_PRECEDENCE - 1);
+        if (this.enableConnectionManagement != null) {
+            advisor.setOrder(this.enableConnectionManagement.<Integer>getNumber("order"));
+        } else {
+            advisor.setOrder(Ordered.LOWEST_PRECEDENCE - 1);
+        }
         return advisor;
     }
 

@@ -4,25 +4,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.github.nikyotensai</groupId>
-        <artifactId>bullet-dependencies</artifactId>
+        <artifactId>bullet-example</artifactId>
         <version>${revision}</version>
-        <relativePath>../bullet-dependencies</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bullet-example</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>bullet-jdbc-example</artifactId>
+    <packaging>jar</packaging>
 
-
-    <modules>
-        <module>bullet-jdbc-example</module>
-        <module>bullet-bean-example</module>
-    </modules>
 
     <dependencies>
         <dependency>
             <groupId>com.github.nikyotensai</groupId>
             <artifactId>bullet-jdbc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
     </dependencies>
+
 </project>
