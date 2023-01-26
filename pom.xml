@@ -13,16 +13,18 @@
 
 
     <artifactId>bullet</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
 
     <modules>
+        <module>bullet-dependencies</module>
         <module>bullet-bean</module>
         <module>bullet-jdbc</module>
     </modules>
 
 
     <properties>
+        <revision>2.0.0-SNAPSHOT</revision>
         <spring.boot.version>2.5.3</spring.boot.version>
     </properties>
 
