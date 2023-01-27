@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.github.nikyotensai.bean.util.SpringUtil,com.github.nikyotensai.bean.config.OrikaAutoConfiguration
+  com.github.nikyotensai.bullet.bean.util.SpringUtil,com.github.nikyotensai.bullet.bean.config.OrikaAutoConfiguration
