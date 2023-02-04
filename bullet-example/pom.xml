@@ -19,10 +19,9 @@
         <module>bullet-bean-example</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.github.nikyotensai</groupId>
-            <artifactId>bullet-jdbc</artifactId>
-        </dependency>
-    </dependencies>
+    <properties>
+        <maven.install.skip>true</maven.install.skip>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
 </project>
