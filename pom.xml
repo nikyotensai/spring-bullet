@@ -20,6 +20,7 @@
         <module>bullet-dependencies</module>
         <module>bullet-bean</module>
         <module>bullet-jdbc</module>
+        <module>bullet-sharding</module>
         <module>bullet-example</module>
     </modules>
 
